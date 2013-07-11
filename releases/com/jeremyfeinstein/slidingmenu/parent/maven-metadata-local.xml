@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.jeremyfeinstein.slidingmenu</groupId>
+  <artifactId>parent</artifactId>
+  <versioning>
+    <versions>
+      <version>1.3-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20130711212357</lastUpdated>
+  </versioning>
+</metadata>

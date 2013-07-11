@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>com.jeremyfeinstein.slidingmenu</groupId>
+  <artifactId>slidingmenu</artifactId>
+  <version>1.3-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <localCopy>true</localCopy>
+    </snapshot>
+    <lastUpdated>20130711003052</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>1.3-SNAPSHOT</value>
+        <updated>20130711003052</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>apklib</extension>
+        <value>1.3-SNAPSHOT</value>
+        <updated>20130711003052</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>1.3-SNAPSHOT</value>
+        <updated>20130711003052</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>
