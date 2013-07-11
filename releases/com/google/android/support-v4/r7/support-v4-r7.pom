@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
+    <groupId>com.google.android</groupId>
+    <artifactId>support-v4</artifactId>
+    <packaging>jar</packaging>
+    <version>r7</version>
+
+    <!--
+    Package was created and published to the Central repository by the
+    developers of the Android4Maven project at https://sourceforge.net/projects/android4maven/
+    -->
+    <name>Android Support Library (v4)</name>
+    <description>The Support Package includes static "support libraries" that you can add to your Android application in order to use APIs that are either not available for older platform versions or that offer "utility" APIs that aren't a part of the framework APIs.</description>
+    <url>http://developer.android.com/sdk/compatibility-library.html</url>
+    <inceptionYear>2011</inceptionYear>
+
+    <licenses>
+        <license>
+            <name>Apache License Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <organization>
+        <name>Google</name>
+        <url>http://google.com</url>
+    </organization>
+
+    <issueManagement>
+        <system>Google Code</system>
+        <url>http://b.android.com</url>
+    </issueManagement>
+
+    <scm>
+        <connection>scm:git:https://android.googlesource.com/platform/frameworks/support</connection>
+        <developerConnection>scm:git:https://android.googlesource.com/platform/frameworks/support</developerConnection>
+        <url>http://s.android.com</url>
+    </scm>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- Skip test compilation. -->
+        <maven.test.skip>true</maven.test.skip>
+
+        <java.version>1.5</java.version>
+        <android.version>4.0.1.2</android.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android</artifactId>
+            <version>${android.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>sign</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.4</version>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>
